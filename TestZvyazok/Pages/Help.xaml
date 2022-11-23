@@ -1,0 +1,38 @@
+﻿<Page x:Class="TestZvyazok.Pages.Help"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:local="clr-namespace:TestZvyazok.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="550" d:DesignWidth="900"
+      Title="Help" Background="White">
+
+    <Grid>
+
+        <TextBlock Text="Техпідтримка" FontSize="30" FontWeight="Bold" HorizontalAlignment="Center"></TextBlock>
+        <Border MinWidth="100" MinHeight="350" Background="White" CornerRadius="20" VerticalAlignment="Center" Margin="58,62,58,0" Height="389">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="15" Color="Black"></DropShadowEffect>
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock Text="Контакти" FontSize="25" FontWeight="Bold" Padding="20"></TextBlock>
+                <TextBlock Height="38" Margin="10" FontSize="25" FontFamily="Comic Sans MS" HorizontalAlignment="Stretch"><Run Text="Цілодобовий телефон підтримки клієнтів NaZvyazku: "/><LineBreak/></TextBlock>
+                <WrapPanel Width="auto" Height="35" Margin="10">
+                    <materialDesign:PackIcon Kind="Phone" Height="35" Width="39"/>
+                    <TextBlock Text="3600" FontSize="25"></TextBlock>
+                </WrapPanel>
+                <WrapPanel Width="auto" Height="35" Margin="10">
+                    <materialDesign:PackIcon Kind="Phone" Height="35" Width="39"/>
+                    <TextBlock Text="3700" FontSize="25"></TextBlock>
+                </WrapPanel>
+                <WrapPanel Width="auto" Height="35" Margin="10">
+                    <materialDesign:PackIcon Kind="Phone" Height="35" Width="39"/>
+                    <TextBlock Text="+38-172-000-00-01" FontSize="25"></TextBlock>
+                </WrapPanel>
+                <TextBlock Text="*Протягом дня, якщо Вам не передзвонили, можете звернутися до найближчого відділення NaZvyazku*" FontSize="15" Padding="20" FontFamily="Franklin Gothic Medium" HorizontalAlignment="Center"></TextBlock>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Page>

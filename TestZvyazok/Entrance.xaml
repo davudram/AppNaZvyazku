@@ -1,0 +1,31 @@
+﻿<Window x:Class="TestZvyazok.Entrance"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:TestZvyazok"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="800"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{x:Null}"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Border MinWidth="400" Margin="15" Background="White" VerticalAlignment="Center" Padding="30" MaxWidth="550" CornerRadius="20">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightBlue" ShadowDepth="0"></DropShadowEffect>
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock Text="Вхід" FontSize="30" FontWeight="Bold" Margin="0 0 0 20"></TextBlock>
+                <Grid Margin="0 0 0 20">
+                    <Button HorizontalAlignment="Left" Content="Назад"></Button>
+                </Grid>
+                <TextBox x:Name="TexBoxLogin" materialDesign:HintAssist.Hint="Введіть логін" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
+                <PasswordBox x:Name="TextBoxPassword" materialDesign:HintAssist.Hint="Введіть пароль" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"></PasswordBox>
+                <Button Margin="0 20" Content="Увійти" Click="Button_Click"></Button>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

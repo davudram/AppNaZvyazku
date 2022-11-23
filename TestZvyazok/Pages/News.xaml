@@ -1,0 +1,51 @@
+﻿<Page x:Class="TestZvyazok.News"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TestZvyazok"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="900"
+      Title="Page1" Background="White">
+    <Grid>
+        <TextBlock Text="Новини" HorizontalAlignment="Center" FontSize="25" FontWeight="Bold"></TextBlock>
+        <Border MinWidth="50" MinHeight="350" Background="White" CornerRadius="20" VerticalAlignment="Top" Margin="52,40,606,0" Height="63">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="15" Color="Black"></DropShadowEffect>
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock FontSize="19" HorizontalAlignment="Center" FontWeight="DemiBold" FontStretch="Medium" Height="235" Width="185"><Run Text="NaZvyazku"/><LineBreak/><Run Text="запустив "/><LineBreak/><Run Text="акцію спільно"/><LineBreak/><Run Text="однією з "/><LineBreak/><Run Text="найбільш"/><LineBreak/><Run Text="криптовалютних"/><LineBreak/><Run Text="бірж"/></TextBlock>
+                <TextBlock FontSize="13" HorizontalAlignment="Center" FontStyle="Italic" FontWeight="Bold" Height="107" Width="165"><Run Text="Завдяки цієї"/><LineBreak/><Run Text="акції можна"/><Run Text=" "/><Run Text="отримати"/><LineBreak/><Run Text="декілька бонусних"/><LineBreak/><Run Text="пропозицій"/><LineBreak/><Run Text="користуючись додатком "/><LineBreak/><Run Text="NaZvyazku"/></TextBlock>
+            </StackPanel>
+        </Border>
+        <Border MinWidth="50" MinHeight="350" Background="White" CornerRadius="20" VerticalAlignment="Top" Margin="334,40,324,0" Height="63">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="15" Color="Black"/>
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock FontSize="19" HorizontalAlignment="Center"  FontWeight="DemiBold" FontStretch="Medium" Height="235" Width="186"><Run Text="NaZvyazku"/><LineBreak/><Run Text="пропонує своїм"/><LineBreak/><Run Text="абонентам"/><LineBreak/><Run Text="заощаджувати"/><LineBreak/><Run Text="з"/><Run Text="авядки"/><LineBreak/><Run Text="спілній акції с "/><Run Text=" WOG"/></TextBlock>
+                <TextBlock FontSize="13" HorizontalAlignment="Center" FontStyle="Italic" FontWeight="Bold"><Run Text="NaZvyazku"/><Run Language="uk-ua" Text=" продовжує"/><LineBreak/><Run Language="uk-ua" Text="співравцю з партнерами,"/><LineBreak/><Run Language="uk-ua" Text="щоб користувачі"/><LineBreak/><Run Language="uk-ua" Text="мали білше можливостей"/><LineBreak/><Run Language="uk-ua" Text="послугами"/><Run Text=" "/></TextBlock>
+            </StackPanel>
+        </Border>
+        <Border MinWidth="50" MinHeight="350" Background="White" CornerRadius="20" VerticalAlignment="Top" Margin="618,40,37,0" Height="63">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="15" Color="Black"/>
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock FontSize="19" FontWeight="DemiBold" FontStretch="Medium" Height="235" Width="189"><Run Language="uk-ua" Text="Акція Дарунок за"/><LineBreak/><Run Language="uk-ua" Text="посилку у поштомат"/><LineBreak/><Run Language="uk-ua" Text="від Київстар ТБ та"/><LineBreak/><Run Language="uk-ua" Text="Нової пошти"/></TextBlock>
+                <TextBlock FontSize="13" FontStyle="Italic" FontWeight="Bold" Height="107" Width="170"><Run Text="NaZvyazku "/><Run Language="uk-ua" Text="разом із"/><LineBreak/><Run Language="uk-ua" Text="Новою поштою"/><LineBreak/><Run Language="uk-ua" Text="проводить спільну акцію"/><LineBreak/><Run Language="uk-ua" Text="Дарунок за посилку у"/><LineBreak/><Run Language="uk-ua" Text="поштомат."/></TextBlock>
+            </StackPanel>
+        </Border>
+
+        <Border MinWidth="50" MinHeight="100" Background="White" CornerRadius="20" VerticalAlignment="Top" Margin="49,446,39,0" Height="172">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="15" Color="Black"></DropShadowEffect>
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock FontSize="20" HorizontalAlignment="Center" FontWeight="Bold" Text="Допомогайте дітям із Nazvyazku які перебувають під агресією ворога"></TextBlock>
+                <TextBlock Width="506" Height="86"><Run Text="З 1 серпня до 30 вересня 2022 року NaZvyazku проводить промоакцію '14 днів NaZvyazku'"/><LineBreak/><Run Text="для абонентів, які зроблять переказ на проєкт Дитяча надія"/><Run Text=". "/><Run Text=" Усі абоненти передплаченого"/><LineBreak/><Run Text="зв'"/><Run Text="язку "/><Run Text="NaZvyazku"/><Run Text=", які зроблять переказ на проєкт Дитяча надія через "/><Run Text="SMS, USSD-"/><Run Text="код або"/><LineBreak/><Run Text="банківською картою отримають доступ до волонтерства разом з "/><Run Text="NaZvyazku. "/><Run Text="Все буде"/><LineBreak/><Run Text="Україна!"/></TextBlock>
+            </StackPanel>
+        </Border>
+
+    </Grid>
+</Page>

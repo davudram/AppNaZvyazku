@@ -1,0 +1,19 @@
+﻿<Page x:Class="TestZvyazok.Pages.AddCreditCard"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TestZvyazok.Pages"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="900"
+      Title="AddCreditCard" Background="White">
+
+    <Grid>
+        <TextBlock Text="Прив'язати картку" FontSize="30" FontWeight="Bold" Margin="0,10,0,391" HorizontalAlignment="Center"/>
+        <TextBox materialDesign:HintAssist.Hint="Введіть номер картки" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="238,116,238,286"/>
+        <PasswordBox materialDesign:HintAssist.Hint="Введіть CVV-код" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" Margin="238,155,238,253"/>
+        <PasswordBox materialDesign:HintAssist.Hint="Введіть дату картки" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" Margin="238,197,238,209"/>
+        <Button Content="Привязати" Click="Button_Click" Margin="238,259,238,159"/>
+    </Grid>
+</Page>

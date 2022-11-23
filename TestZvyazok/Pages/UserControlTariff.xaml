@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="TestZvyazok.Pages.UserControlTariff"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TestZvyazok.Pages"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="900" Background="White">
+
+    <StackPanel>
+        <TextBlock Margin="10" FontFamily="Courier New" FontSize="12" Text="LoveUA" HorizontalAlignment="Center"></TextBlock>
+        <Image Height="150" Width="200" Source="/Icons/связь 2.jpg" Stretch="Fill"/>
+        <TextBlock FontSize="10" Margin="5" TextWrapping="Wrap" FontFamily="Champagne &amp; Limousines" HorizontalAlignment="Center">
+                              1200 хв. дзвінки на NaZvyazku, інші мобільні та міські по Україні
+        </TextBlock>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBlock Text="UAH 150" VerticalAlignment="Center" Margin="10" FontSize="20" FontFamily="Champagne &amp; Limousines"></TextBlock>
+            <Button Width="100" Content="Придбати" Margin="10" Background="#FF33A7D8"></Button>
+        </StackPanel>
+    </StackPanel>
+</UserControl>

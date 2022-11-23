@@ -1,0 +1,34 @@
+﻿<Page x:Class="TestZvyazok.Pages.PersonalArea"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TestZvyazok.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="900"
+      Title="PersonalArea" Background="White">
+    <Grid>
+        <TextBlock Text="Особистий кабінет" FontWeight="Bold" FontSize="30" HorizontalAlignment="Center" Margin="0,10,0,378"></TextBlock>
+        <Image Width="150" HorizontalAlignment="Left" Margin="82,119,0,182" Source="/Icons/Без названия.png">
+            <Image.Effect>
+                <DropShadowEffect BlurRadius="10" Color="Black"></DropShadowEffect>
+            </Image.Effect>
+        </Image>
+        <Button Content="Додати фото" Width="180" Margin="72,303,648,115" />
+        <Button Content="Видалити фото" Width="180" Margin="72,359,648,59"/>
+        <ListView Margin="433,82,63,49" FontWeight="Bold" FontSize="12">
+            <TextBlock>Логін</TextBlock>
+            <TextBlock>none</TextBlock>
+            <TextBlock>Прізвище та ім'я</TextBlock>
+            <TextBlock>none</TextBlock>
+            <TextBlock>Пошта</TextBlock>
+            <TextBlock>none</TextBlock>
+            <TextBlock>Телефон</TextBlock>
+            <TextBlock>none</TextBlock>
+            <TextBlock>Баланс</TextBlock>
+            <TextBlock>none</TextBlock>
+            <TextBlock>Номер послуги</TextBlock>
+            <TextBlock>none</TextBlock>
+        </ListView>
+    </Grid>
+</Page>
