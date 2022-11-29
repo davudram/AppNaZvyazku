@@ -9,13 +9,13 @@
              d:DesignHeight="450" d:DesignWidth="900" Background="White">
 
     <StackPanel>
-        <TextBlock Margin="10" FontFamily="Courier New" FontSize="12" Text="LoveUA" HorizontalAlignment="Center"></TextBlock>
-        <Image Height="150" Width="200" Source="/Icons/связь 2.jpg" Stretch="Fill"/>
-        <TextBlock FontSize="10" Margin="5" TextWrapping="Wrap" FontFamily="Champagne &amp; Limousines" HorizontalAlignment="Center">
+        <TextBlock x:Name="NameTariff" Margin="10" FontFamily="Courier New" FontSize="12" Text="LoveUA" HorizontalAlignment="Center"></TextBlock>
+        <Image x:Name="ImageTariff" Height="150" Width="200" Source="/Icons/связь 2.jpg" Stretch="Fill"/>
+        <TextBlock x:Name="NotesTariff" FontSize="10" Margin="5" TextWrapping="Wrap" FontFamily="Champagne &amp; Limousines" HorizontalAlignment="Center">
                               1200 хв. дзвінки на NaZvyazku, інші мобільні та міські по Україні
         </TextBlock>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-            <TextBlock Text="UAH 150" VerticalAlignment="Center" Margin="10" FontSize="20" FontFamily="Champagne &amp; Limousines"></TextBlock>
+            <TextBlock x:Name="PriceTariff" Text="UAH 150" VerticalAlignment="Center" Margin="10" FontSize="20" FontFamily="Champagne &amp; Limousines"></TextBlock>
             <Button Width="100" Content="Придбати" Margin="10" Background="#FF33A7D8"></Button>
         </StackPanel>
     </StackPanel>

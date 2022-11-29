@@ -1,4 +1,4 @@
-namespace TestZvyazok
+namespace TestZvyazok.Models
 {
     using System;
     using System.Collections.Generic;
@@ -12,22 +12,18 @@ namespace TestZvyazok
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public CreditCard()
         {
-            Authorizations = new HashSet<Authorization>();
+            USERs = new HashSet<USER>();
         }
 
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int CreditCardID { get; set; }
-        [Required]
+
         public int? CardNumber { get; set; }
-        [Required]
+
         public int? CVV { get; set; }
-        [Required]
-        [DataType(DataType.DateTime)]
-        [Range(1990,2023)]
+
         public int? DateCard { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Authorization> Authorizations { get; set; }
+        public virtual ICollection<USER> USERs { get; set; }
     }
 }

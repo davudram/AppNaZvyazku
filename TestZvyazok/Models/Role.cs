@@ -1,4 +1,4 @@
-namespace TestZvyazok
+namespace TestZvyazok.Models
 {
     using System;
     using System.Collections.Generic;
@@ -16,15 +16,12 @@ namespace TestZvyazok
         }
 
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int RolesID { get; set; }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int ID { get; set; }
-
         [StringLength(10)]
-        [Required]
-        public string Roles { get; set; }
+        public string RoleName { get; set; }
+
+        public int? PersonalAreaID { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<USER> USERs { get; set; }

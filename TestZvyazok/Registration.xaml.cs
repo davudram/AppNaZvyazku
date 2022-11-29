@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.Entity.Migrations;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -16,6 +17,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TestZvyazok.Models;
+using TestZvyazok.ViewModels;
 using ValidationResult = System.Windows.Controls.ValidationResult;
 
 namespace TestZvyazok
@@ -25,32 +28,22 @@ namespace TestZvyazok
     /// </summary>
     public partial class MainWindow : Window
     {
-        ZvyazokModel model = new ZvyazokModel();
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new RegistrationViewModel();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            model.Authorizations.Add(new Authorization{ Login = TextBoxLogin.Text, Password = TextBoxPassword.Password, FullName = TextBoxFullName.Text, Email = TextBoxEmail.Text});
-            var context = new ValidationContext(model);
-            model.SaveChanges();
-            if(context!=null)
-            {
-                MessageBox.Show("Успіх");
-                MainMenu menu = new MainMenu();
-                menu.Show();
-                Close();
-            }
+            Entrance entrance = new Entrance();
+            entrance.Show();
+            Close();
         }
 
-        //private Boolean chekUser()
-        //{
-        //    string loginUser = TextBoxLogin.Text;
-        //    string passwordUser = TextBoxPassword.Password;
-
-            
-        //}
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }

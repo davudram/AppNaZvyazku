@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestZvyazok"
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:viewmodels="clr-namespace:TestZvyazok.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:RegistrationViewModel}"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
@@ -13,7 +13,7 @@
         WindowStyle="None"
         WindowStartupLocation="CenterScreen"
         >
-    
+
     <Grid>
         <Border MinWidth="400" Margin="15" Background="White" VerticalAlignment="Center" Padding="30" MaxWidth="550" CornerRadius="20">
             <Border.Effect>
@@ -23,14 +23,11 @@
                 <TextBlock Text="Вітаю!" FontSize="30" FontWeight="Bold" Margin="0 0 0 20" ></TextBlock>
                 <Grid Margin="0 0 0 20">
                     <Button HorizontalAlignment="Left" Content="Реєстрація" Cursor="Hand"></Button>
-                    <Button HorizontalAlignment="Right" Content="Війти" Click="Button_Click" Cursor="Hand"></Button>
+                    <Button HorizontalAlignment="Right" Content="Війти" Cursor="Hand" Click="Button_Click"></Button>
                 </Grid>
-                <TextBox x:Name="TextBoxLogin" materialDesign:HintAssist.Hint="Введіть логін" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
-                <PasswordBox x:Name="TextBoxPassword" materialDesign:HintAssist.Hint="Введіть пароль" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"></PasswordBox>
-                <TextBox x:Name="TextBoxFullName" materialDesign:HintAssist.Hint="Введіть ім'я та прізвище" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
-                <TextBox x:Name="TextBoxPhoneNumber" materialDesign:HintAssist.Hint="Введіть номер телефону" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
-                <TextBox x:Name="TextBoxEmail" materialDesign:HintAssist.Hint="Введіть пошту" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
-                <Button Content="Зареєструватися" Margin="0 20"></Button>
+                <TextBox x:Name="TextBoxLogin" materialDesign:HintAssist.Hint="Введіть логін" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="{Binding User.Login,  UpdateSourceTrigger=PropertyChanged}"></TextBox>
+                <TextBox x:Name="TextBoxLogin_Copy" materialDesign:HintAssist.Hint="Введіть пароль" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="{Binding User.Password, UpdateSourceTrigger=PropertyChanged}"/>
+                <Button Content="Зареєструватися" Margin="0 20" Cursor="Hand" Command="{Binding AuthCommand}" Click="Button_Click_1"></Button>
             </StackPanel>
         </Border>
     </Grid>

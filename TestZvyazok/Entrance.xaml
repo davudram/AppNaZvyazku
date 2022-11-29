@@ -5,6 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:TestZvyazok"
+        xmlns:viewmodels="clr-namespace:TestZvyazok.ViewModels"
+        d:DataContext="{d:DesignInstance Type=viewmodels:EntranceViewModel}"
         mc:Ignorable="d"
         Title="Window1" Height="450" Width="800"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
@@ -19,12 +21,10 @@
             </Border.Effect>
             <StackPanel>
                 <TextBlock Text="Вхід" FontSize="30" FontWeight="Bold" Margin="0 0 0 20"></TextBlock>
-                <Grid Margin="0 0 0 20">
-                    <Button HorizontalAlignment="Left" Content="Назад"></Button>
-                </Grid>
-                <TextBox x:Name="TexBoxLogin" materialDesign:HintAssist.Hint="Введіть логін" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
-                <PasswordBox x:Name="TextBoxPassword" materialDesign:HintAssist.Hint="Введіть пароль" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"></PasswordBox>
-                <Button Margin="0 20" Content="Увійти" Click="Button_Click"></Button>
+                <Grid Margin="0 0 0 20"/>
+                <TextBox x:Name="TextBoxLogin" materialDesign:HintAssist.Hint="Введіть логін" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="{Binding User.Login,  UpdateSourceTrigger=PropertyChanged}"></TextBox>
+                <TextBox x:Name="TextBoxLogin_Copy" materialDesign:HintAssist.Hint="Введіть пароль" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="{Binding User.Password, UpdateSourceTrigger=PropertyChanged}"/>
+                <Button Margin="0 20" Content="Увійти" Command="{Binding AuthCommand}" Cursor="Hand" Click="Button_Click_1"></Button>
             </StackPanel>
         </Border>
     </Grid>

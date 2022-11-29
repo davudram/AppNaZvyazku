@@ -1,4 +1,4 @@
-namespace TestZvyazok
+namespace TestZvyazok.Models
 {
     using System;
     using System.Collections.Generic;
@@ -10,27 +10,29 @@ namespace TestZvyazok
     public partial class USER
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int UserID { get; set; }
-
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Column(Order = 0)]
         public int ID { get; set; }
-        [Required]
-        [StringLength(20)]
-        public string FullName { get; set; }
-        [Required]
-        [DataType(DataType.DateTime)]
-        [Range(1990, 2023)]
-        public DateTime? DateReg { get; set; }
-        [Required]
-        public int? RoleID { get; set; }
-        [Required]
-        public int? AuthorizationID { get; set; }
+
+        [Key]
+        [Column(Order = 1)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int RoleID { get; set; }
+
+        [Key]
+        [Column(Order = 2)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int AuthorizationID { get; set; }
+
+        public int? TariffID { get; set; }
+
+        public int? CreditCardID { get; set; }
 
         public virtual Authorization Authorization { get; set; }
 
-        public virtual PersonalArea PersonalArea { get; set; }
+        public virtual CreditCard CreditCard { get; set; }
 
         public virtual Role Role { get; set; }
+
+        public virtual TARIFF TARIFF { get; set; }
     }
 }

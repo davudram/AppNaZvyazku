@@ -1,21 +1,18 @@
 ﻿using GalaSoft.MvvmLight.Command;
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
-using System.Web.UI.WebControls;
 using System.Windows;
 using TestZvyazok.Models;
-using TestZvyazok.Properties;
 using TestZvyazok.UserModels;
 
 namespace TestZvyazok.ViewModels
 {
-    class RegistrationViewModel : INotifyPropertyChanged
+    public class EntranceViewModel : INotifyPropertyChanged
     {
         private UserAuth user;
 
@@ -35,30 +32,28 @@ namespace TestZvyazok.ViewModels
 
         public RelayCommand AuthCommand
         {
-            get { return myVar ?? (myVar = new RelayCommand(AddData)); }
+            get { return myVar ?? (myVar = new RelayCommand(EnterData)); }
         }
 
 
-        private void AddData()
+        private void EnterData()
         {
             Authorization authorization = new Authorization();
             authorization.Login = User.Login;
             authorization.Password = User.Password;
             if (model.Authorizations.FirstOrDefault(x => x.Login.Equals(authorization.Login)) == null)
             {
-                model.Authorizations.Add(authorization);
-                model.SaveChanges();
-                MainMenu menu = new MainMenu();
-                menu.Show();
+                MessageBox.Show("Такий користувач не існує!!!");
             }
 
             else
             {
-                MessageBox.Show("Такий користувач вже існує!!!");
+                MainMenu menu = new MainMenu();
+                menu.Show();
             }
         }
 
-        public RegistrationViewModel()
+        public EntranceViewModel()
         {
             user = new UserAuth();
             model = new ZvyazokModel();
