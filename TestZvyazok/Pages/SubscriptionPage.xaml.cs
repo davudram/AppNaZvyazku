@@ -16,13 +16,20 @@ using System.Windows.Shapes;
 namespace TestZvyazok.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для Subscription.xaml
+    /// Логика взаимодействия для SubscriptionPage.xaml
     /// </summary>
-    public partial class Subscription : Page
+    public partial class SubscriptionPage : Page
     {
-        public Subscription()
+        private object subscriptionID;
+
+        public SubscriptionPage()
         {
             InitializeComponent();
+        }
+
+        public SubscriptionPage(object subscriptionID)
+        {
+            this.subscriptionID = subscriptionID;
         }
     }
 }

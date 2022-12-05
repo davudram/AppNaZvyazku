@@ -8,7 +8,7 @@ namespace TestZvyazok.Models
     public partial class ZvyazokModel : DbContext
     {
         public ZvyazokModel()
-            : base("name=ZvyazokModel1")
+            : base("name=ZvyazokModel2")
         {
         }
 
@@ -16,6 +16,7 @@ namespace TestZvyazok.Models
         public virtual DbSet<CreditCard> CreditCards { get; set; }
         public virtual DbSet<PersonalArea> PersonalAreas { get; set; }
         public virtual DbSet<Role> Roles { get; set; }
+        public virtual DbSet<Subscription> Subscriptions { get; set; }
         public virtual DbSet<TARIFF> TARIFFs { get; set; }
         public virtual DbSet<USER> USERs { get; set; }
 
@@ -47,18 +48,6 @@ namespace TestZvyazok.Models
                 .WithRequired(e => e.Role)
                 .HasForeignKey(e => e.RoleID)
                 .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<TARIFF>()
-                .Property(e => e.Name)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<TARIFF>()
-                .Property(e => e.Device)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<TARIFF>()
-                .Property(e => e.Notes)
-                .IsUnicode(false);
         }
     }
 }

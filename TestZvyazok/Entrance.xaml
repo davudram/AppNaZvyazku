@@ -24,7 +24,7 @@
                 <Grid Margin="0 0 0 20"/>
                 <TextBox x:Name="TextBoxLogin" materialDesign:HintAssist.Hint="Введіть логін" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="{Binding User.Login,  UpdateSourceTrigger=PropertyChanged}"></TextBox>
                 <TextBox x:Name="TextBoxLogin_Copy" materialDesign:HintAssist.Hint="Введіть пароль" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="{Binding User.Password, UpdateSourceTrigger=PropertyChanged}"/>
-                <Button Margin="0 20" Content="Увійти" Command="{Binding AuthCommand}" Cursor="Hand"></Button>
+                <Button Margin="0 20" Content="Увійти" Command="{Binding AuthCommand}" Cursor="Hand" Click="Button_Click"></Button>
             </StackPanel>
         </Border>
     </Grid>

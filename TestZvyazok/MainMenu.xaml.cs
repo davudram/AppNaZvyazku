@@ -47,7 +47,7 @@ namespace TestZvyazok
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            fcont.Navigate(new Uri("Pages/Subscription.xaml", UriKind.RelativeOrAbsolute));
+            fcont.Navigate(new Uri("Pages/SubscriptionPage.xaml", UriKind.RelativeOrAbsolute));
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)

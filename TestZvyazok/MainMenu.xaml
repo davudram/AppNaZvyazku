@@ -45,7 +45,7 @@
                         </WrapPanel>
                     </Button>
 
-                    <Button Style="{StaticResource MaterialDesignFlatButton}" Foreground="{DynamicResource PrimaryHueLightForegroundBrush}" materialDesign:ButtonAssist.CornerRadius="6" Width="auto" Height="45" materialDesign:RippleAssist.Feedback="White" Margin="0 0 0 15" Click="Button_Click_2">
+                    <Button Style="{StaticResource MaterialDesignFlatButton}" Foreground="{DynamicResource PrimaryHueLightForegroundBrush}" materialDesign:ButtonAssist.CornerRadius="6" Width="auto" Height="45" materialDesign:RippleAssist.Feedback="White" Margin="0 0 0 15" Click="Button_Click_2" Command="{Binding ShowSubCommand}" Cursor="Hand">
                         <WrapPanel Width="140">
                             <TextBlock>Придбати абонплату</TextBlock>
                         </WrapPanel>

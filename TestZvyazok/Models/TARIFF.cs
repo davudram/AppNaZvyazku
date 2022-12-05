@@ -17,10 +17,10 @@ namespace TestZvyazok.Models
 
         public int TariffID { get; set; }
 
-        [StringLength(15)]
+        [StringLength(50)]
         public string Name { get; set; }
 
-        [StringLength(20)]
+        [StringLength(50)]
         public string Device { get; set; }
 
         public int? Gigabyte { get; set; }
@@ -29,7 +29,7 @@ namespace TestZvyazok.Models
 
         public int? CallsOuter { get; set; }
 
-        [StringLength(75)]
+        [StringLength(256)]
         public string Notes { get; set; }
 
         public double? Price { get; set; }

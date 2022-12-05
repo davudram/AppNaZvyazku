@@ -5,84 +5,14 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TestZvyazok.Pages"
              mc:Ignorable="d" 
-             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-             d:DesignHeight="500" d:DesignWidth="900">
-    <Grid>
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-
-            <Grid Grid.Column="0" Height="300" Background="White" Margin="10">
-                <Grid.Effect>
-                    <DropShadowEffect BlurRadius="10" Color="Aqua" ShadowDepth="3"></DropShadowEffect>
-                </Grid.Effect>
-                <StackPanel Width="200">
-                    <TextBlock Margin="10" FontFamily="Courier New" FontSize="12" Text="Вільний Zvyazok" HorizontalAlignment="Center"></TextBlock>
-                    <Image Height="150" Width="200" Source="/Icons/связь 1.jpg" Stretch="Fill"/>
-                    <TextBlock FontSize="10" Margin="5" TextWrapping="Wrap" FontFamily="Champagne &amp; Limousines">
-                            Безліміт на NaZvyazku після використання хвилин на всі мобільні номери
-                    </TextBlock>
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <TextBlock Text="UAH 180" VerticalAlignment="Center" Margin="10" FontSize="20" FontFamily="Champagne &amp; Limousines"></TextBlock>
-                        <Button Width="100" Content="Придбати" Margin="10" Background="#FF33A7D8"></Button>
-                    </StackPanel>
-                </StackPanel>
-            </Grid>
-
-            <Grid Grid.Column="1" Height="300" Background="White" Margin="10">
-                <Grid.Effect>
-                    <DropShadowEffect BlurRadius="10" Color="Aqua" ShadowDepth="3"></DropShadowEffect>
-                </Grid.Effect>
-                <StackPanel Width="200">
-                    <TextBlock Margin="10" FontFamily="Courier New" FontSize="12" Text="Смарт Zvyazok" HorizontalAlignment="Center"></TextBlock>
-                    <Image Height="150" Width="200" Source="/Icons/images.jpg" Stretch="Fill"/>
-                    <TextBlock FontSize="10" Margin="5" TextWrapping="Wrap" FontFamily="Champagne &amp; Limousines">
-                           Безліміт на NaZvyazku після використання хвилин на всі мобільні номери
-                    </TextBlock>
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <TextBlock Text="UAH 120" VerticalAlignment="Center" Margin="10" FontSize="20" FontFamily="Champagne &amp; Limousines"></TextBlock>
-                        <Button Width="100" Content="Придбати" Margin="10" Background="#FF33A7D8"></Button>
-                    </StackPanel>
-                </StackPanel>
-            </Grid>
-
-            <Grid Grid.Column="2" Height="300" Background="White" Margin="10">
-                <Grid.Effect>
-                    <DropShadowEffect BlurRadius="10" Color="Aqua" ShadowDepth="3"></DropShadowEffect>
-                </Grid.Effect>
-                <StackPanel Width="200">
-                    <TextBlock Margin="10" FontFamily="Courier New" FontSize="12" Text="Просто Zvyazok" HorizontalAlignment="Center"></TextBlock>
-                    <Image Height="150" Width="200" Source="/Icons/shutterstock_318036419.jpg" Stretch="Fill"/>
-                    <TextBlock FontSize="10" Margin="5" TextWrapping="Wrap" FontFamily="Champagne &amp; Limousines">
-                           Безліміт на NaZvyazku після використання хвилин на всі мобільні номери
-                    </TextBlock>
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <TextBlock Text="UAH 90" VerticalAlignment="Center" Margin="10" FontSize="20" FontFamily="Champagne &amp; Limousines"></TextBlock>
-                        <Button Width="100" Content="Придбати" Margin="10" Background="#FF33A7D8"></Button>
-                    </StackPanel>
-                </StackPanel>
-            </Grid>
-
-            <Grid Grid.Column="3" Height="300" Background="White" Margin="10">
-                <Grid.Effect>
-                    <DropShadowEffect BlurRadius="10" Color="Aqua" ShadowDepth="3"></DropShadowEffect>
-                </Grid.Effect>
-                <StackPanel Width="200">
-                    <TextBlock Margin="10" FontFamily="Courier New" FontSize="12" Text="Platinum Zvyazok" HorizontalAlignment="Center"></TextBlock>
-                    <Image Height="150" Width="200" Source="/Icons/Signal.jpg" Stretch="Fill"/>
-                    <TextBlock FontSize="10" Margin="5" TextWrapping="Wrap" FontFamily="Champagne &amp; Limousines">
-                            Безліміт на NaZvyazku після використання хвилин на всі мобільні номери
-                    </TextBlock>
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <TextBlock Text="UAH 250" VerticalAlignment="Center" Margin="10" FontSize="20" FontFamily="Champagne &amp; Limousines"></TextBlock>
-                        <Button Width="100" Content="Придбати" Margin="10" Background="#FF33A7D8"></Button>
-                    </StackPanel>
-                </StackPanel>
-            </Grid>
-        </Grid>
-    </Grid>
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:viewmodels="clr-namespace:TestZvyazok.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:SubscriptionViewModel}"
+             d:DesignHeight="240" d:DesignWidth="200" Background="White">
+    <ItemsControl>
+        <StackPanel>
+            <TextBlock x:Name="NameSubs" Margin="10" FontFamily="Courier New" Width="100" Height="20" FontSize="12" HorizontalAlignment="Center" Text="{Binding Name}"></TextBlock>
+            <TextBlock x:Name="NotesSubs" FontSize="10" Margin="5" TextWrapping="Wrap"  Width="185" Height="100" FontFamily="Champagne &amp; Limousines" Text="{Binding Notes}"/>
+            <TextBlock x:Name="PriceSubs" Margin="10" FontSize="20" FontFamily="Champagne &amp; Limousines" Text="{Binding Price, StringFormat=':{0} UAH'}" Width="109"/>
+            <Button Width="100" Content="Придбати" Margin="10" Background="#FF33A7D8" Cursor="Hand"></Button>
+        </StackPanel>
+    </ItemsControl>
 </UserControl>

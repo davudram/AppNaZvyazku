@@ -115,14 +115,19 @@
     <Compile Include="Models\CreditCard.cs" />
     <Compile Include="Models\PersonalArea.cs" />
     <Compile Include="Models\Role.cs" />
+    <Compile Include="Models\Subscription.cs" />
     <Compile Include="Models\TARIFF.cs" />
     <Compile Include="Models\USER.cs" />
     <Compile Include="Models\ZvyazokModel.cs" />
+    <Compile Include="Pages\SubscriptionPage.xaml.cs">
+      <DependentUpon>SubscriptionPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserModels\CardAuth.cs" />
     <Compile Include="UserModels\UserAuth.cs" />
     <Compile Include="ViewModels\CardViewModel.cs" />
     <Compile Include="ViewModels\EntranceViewModel.cs" />
     <Compile Include="ViewModels\RegistrationViewModel.cs" />
+    <Compile Include="ViewModels\SubscriptionViewModel.cs" />
     <Compile Include="ViewModels\TariffViewModel.cs" />
     <Page Include="MainMenu.xaml">
       <SubType>Designer</SubType>
@@ -148,7 +153,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Subscription.xaml">
+    <Page Include="Pages\SubscriptionPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -189,9 +194,6 @@
     </Compile>
     <Compile Include="Pages\PersonalArea.xaml.cs">
       <DependentUpon>PersonalArea.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\Subscription.xaml.cs">
-      <DependentUpon>Subscription.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Tariff.xaml.cs">
       <DependentUpon>Tariff.xaml</DependentUpon>
