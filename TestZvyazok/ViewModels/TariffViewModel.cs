@@ -1,6 +1,8 @@
 ﻿using GalaSoft.MvvmLight.Command;
+using MaterialDesignThemes.Wpf;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -8,45 +10,58 @@ using System.Text;
 using System.Threading.Tasks;
 using TestZvyazok.Models;
 using TestZvyazok.Pages;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace TestZvyazok.ViewModels
 {
     public class TariffViewModel : INotifyPropertyChanged
     {
 
-        private TARIFF tariff; 
-
-        ZvyazokModel model;
-
-        public TARIFF Tariff
+        private ObservableCollection<TARIFF> tariff; 
+        public ObservableCollection<TARIFF> Tariffs
         {
             get { return tariff; }
             set 
             {
                 tariff = value;
-                OnPropertyChanged("Tariff");
+                OnPropertyChanged("Tariffs");
             }
         }
 
-        private RelayCommand myVar;
+        private TARIFF _selectedTariff;
 
-        public RelayCommand AuthCommand
+        public TARIFF SelectedTariff
         {
-            get { return myVar ?? (myVar = new RelayCommand(ShowData)); }
+            get { return _selectedTariff; }
+            set 
+            {
+                _selectedTariff = value;
+                OnPropertyChanged("SelectedTariff");
+                ShowTariff();
+            }
         }
-
-        private void ShowData()
-        {            //UserControlTariff controlTariff = new UserControlTariff();
-            //controlTariff.NameTariff = tariff.Name;
-
-        }
-
 
         public TariffViewModel()
         {
-            tariff = new TARIFF();
-            model = new ZvyazokModel();
+            tariff = new ObservableCollection<TARIFF>(new ZvyazokModel().TARIFFs);
+            
         }
+
+        private RelayCommand _showCommand;
+
+        public RelayCommand ShowCommand
+        {
+            get { return _showCommand ?? (_showCommand = new RelayCommand(ShowTariff)); }
+        }
+
+        void ShowTariff()
+        {
+            if (SelectedTariff == null)
+                return;
+            Tariff tariffControl = new Tariff(SelectedTariff.TariffID);
+            tariffControl.ShowDialog(SelectedTariff);
+        }
+
 
 
         public event PropertyChangedEventHandler PropertyChanged;

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TestZvyazok.ViewModels;
 
 namespace TestZvyazok.Pages
 {
@@ -23,6 +24,12 @@ namespace TestZvyazok.Pages
         public Tariff()
         {
             InitializeComponent();
+            this.DataContext = new TariffViewModel();
+        }
+
+        public Tariff(int tariffID)
+        {
+            this.DataContext = tariffID;
         }
     }
 }

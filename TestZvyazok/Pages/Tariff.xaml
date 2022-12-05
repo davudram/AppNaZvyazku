@@ -6,20 +6,28 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:TestZvyazok.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="600" d:DesignWidth="2000"
+      d:DesignHeight="600" d:DesignWidth="900"
       Title="Tariff" Background="White">
+    <Page.Resources>
+        <DataTemplate x:Key="listTemplate">
+            <StackPanel Margin="5">
+                <local:UserControlTariff></local:UserControlTariff>
+            </StackPanel>
+        </DataTemplate>
+        <ItemsPanelTemplate x:Key="listPanelTemplate">
+            <WrapPanel />
+        </ItemsPanelTemplate>
+    </Page.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="0" HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" Text="Тариф" FontSize="25" FontWeight="Bold" VerticalAlignment="Top"/>
-        <WrapPanel Grid.Row="1">
-        <local:UserControlTariff x:Name="mycontrol"></local:UserControlTariff>
-        <local:UserControlTariff x:Name="mycontrol1"></local:UserControlTariff>
-        <local:UserControlTariff x:Name="mycontrol2"></local:UserControlTariff>
-        <local:UserControlTariff x:Name="mycontrol3"></local:UserControlTariff>
-        <local:UserControlTariff x:Name="mycontrol4"></local:UserControlTariff>
-        </WrapPanel>
+        <Grid Grid.Row="1">
+            <ListBox ItemsSource="{Binding Tariffs}" ScrollViewer.HorizontalScrollBarVisibility="Disabled"  ItemTemplate="{StaticResource listTemplate}"
+                 ItemsPanel="{StaticResource listPanelTemplate}">
+            </ListBox>
+        </Grid>
     </Grid>
 </Page>

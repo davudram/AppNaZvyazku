@@ -118,7 +118,9 @@
     <Compile Include="Models\TARIFF.cs" />
     <Compile Include="Models\USER.cs" />
     <Compile Include="Models\ZvyazokModel.cs" />
+    <Compile Include="UserModels\CardAuth.cs" />
     <Compile Include="UserModels\UserAuth.cs" />
+    <Compile Include="ViewModels\CardViewModel.cs" />
     <Compile Include="ViewModels\EntranceViewModel.cs" />
     <Compile Include="ViewModels\RegistrationViewModel.cs" />
     <Compile Include="ViewModels\TariffViewModel.cs" />
