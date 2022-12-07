@@ -17,11 +17,13 @@ namespace TestZvyazok.Models
 
         public int CreditCardID { get; set; }
 
-        public int? CardNumber { get; set; }
+        [StringLength(50)]
+        public string CardNumber { get; set; }
 
         public int? CVV { get; set; }
 
-        public int? DateCard { get; set; }
+        [StringLength(50)]
+        public string DateCard { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<USER> USERs { get; set; }

@@ -8,12 +8,13 @@ namespace TestZvyazok.Models
     public partial class ZvyazokModel : DbContext
     {
         public ZvyazokModel()
-            : base("name=ZvyazokModel2")
+            : base("name=ZvyazokModel7")
         {
         }
 
         public virtual DbSet<Authorization> Authorizations { get; set; }
         public virtual DbSet<CreditCard> CreditCards { get; set; }
+        public virtual DbSet<OrderINFO> OrderINFOes { get; set; }
         public virtual DbSet<PersonalArea> PersonalAreas { get; set; }
         public virtual DbSet<Role> Roles { get; set; }
         public virtual DbSet<Subscription> Subscriptions { get; set; }
@@ -29,11 +30,6 @@ namespace TestZvyazok.Models
             modelBuilder.Entity<Authorization>()
                 .Property(e => e.Password)
                 .IsUnicode(false);
-
-            modelBuilder.Entity<Authorization>()
-                .HasMany(e => e.USERs)
-                .WithRequired(e => e.Authorization)
-                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<PersonalArea>()
                 .Property(e => e.FullName)

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TestZvyazok.ViewModels;
 
 namespace TestZvyazok.Pages
 {
@@ -23,6 +24,7 @@ namespace TestZvyazok.Pages
         public PersonalArea()
         {
             InitializeComponent();
+            DataContext = new CardViewModel();
         }
 
         private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)

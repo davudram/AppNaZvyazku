@@ -12,9 +12,9 @@ namespace TestZvyazok.UserModels
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private int cardnumber;
+        private string cardnumber;
 
-        public int CardNumber
+        public string CardNumber
         {
             get { return cardnumber; }
             set { cardnumber = value; OnPropertyChanged("CardNumber"); }
@@ -28,9 +28,9 @@ namespace TestZvyazok.UserModels
             set { cvv = value; OnPropertyChanged("CVV"); }
         }
 
-        private int datecard;
+        private string datecard;
 
-        public int DateCard
+        public string DateCard
         {
             get { return datecard; }
             set { datecard = value; OnPropertyChanged("DateCard"); }

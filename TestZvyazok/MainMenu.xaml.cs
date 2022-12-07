@@ -37,7 +37,7 @@ namespace TestZvyazok
 
         private void btn_Command(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            Environment.Exit(0);
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

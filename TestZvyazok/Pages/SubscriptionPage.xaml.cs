@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TestZvyazok.ViewModels;
 
 namespace TestZvyazok.Pages
 {
@@ -20,14 +21,15 @@ namespace TestZvyazok.Pages
     /// </summary>
     public partial class SubscriptionPage : Page
     {
-        private object subscriptionID;
+        private int subscriptionID;
 
         public SubscriptionPage()
         {
             InitializeComponent();
+            DataContext = new SubscriptionViewModel();
         }
 
-        public SubscriptionPage(object subscriptionID)
+        public SubscriptionPage(int subscriptionID)
         {
             this.subscriptionID = subscriptionID;
         }

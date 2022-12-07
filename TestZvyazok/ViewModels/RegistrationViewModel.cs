@@ -44,9 +44,11 @@ namespace TestZvyazok.ViewModels
             Authorization authorization = new Authorization();
             authorization.Login = User.Login;
             authorization.Password = User.Password;
-            if (model.Authorizations.FirstOrDefault(x => x.Login.Equals(authorization.Login)) == null)
+            if (model.Authorizations.FirstOrDefault(x => x.Login.Equals(User.Login)) == null)
             {
                 model.Authorizations.Add(authorization);
+                model.SaveChanges();
+                USER user = new USER() { RoleID = 1, AuthorizationID = model.Authorizations.FirstOrDefault(x => x.Login.Equals(authorization.Login)).AuthorizationID };
                 model.SaveChanges();
                 MainMenu menu = new MainMenu();
                 menu.Show();

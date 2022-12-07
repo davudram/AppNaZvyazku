@@ -18,6 +18,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using TestZvyazok.Models;
+using TestZvyazok.UserModels;
 using TestZvyazok.ViewModels;
 using ValidationResult = System.Windows.Controls.ValidationResult;
 
@@ -40,5 +41,6 @@ namespace TestZvyazok
             entrance.Show();
             Close();
         }
+
     }
 }

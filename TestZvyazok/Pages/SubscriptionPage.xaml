@@ -7,11 +7,10 @@
       mc:Ignorable="d" 
       d:DesignHeight="600" d:DesignWidth="900" Background="White"
       Title="SubscriptionPage">
-
     <Page.Resources>
         <DataTemplate x:Key="listTemplate">
             <StackPanel Margin="5">
-                <local:UserControlSubscription/>
+                <local:UserControlSubscription></local:UserControlSubscription>
             </StackPanel>
         </DataTemplate>
         <ItemsPanelTemplate x:Key="listPanelTemplate">
@@ -31,3 +30,4 @@
         </Grid>
     </Grid>
 </Page>
+

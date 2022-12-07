@@ -28,6 +28,12 @@ namespace TestZvyazok.ViewModels
                 OnPropertyChanged("Card");
             }
         }
+
+        public CardViewModel()
+        {
+            Card = new CardAuth();
+            model = new ZvyazokModel();
+        }
         
 
         private RelayCommand myVar;
@@ -45,6 +51,8 @@ namespace TestZvyazok.ViewModels
             addcard.DateCard = Card.DateCard;
             if(model.CreditCards.FirstOrDefault(x => x.CardNumber.Equals(addcard.CardNumber)) == null){
                 model.CreditCards.Add(addcard);
+                model.SaveChanges();
+                
             }
 
             else

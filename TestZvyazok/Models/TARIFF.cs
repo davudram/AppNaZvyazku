@@ -12,6 +12,7 @@ namespace TestZvyazok.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public TARIFF()
         {
+            OrderINFOes = new HashSet<OrderINFO>();
             USERs = new HashSet<USER>();
         }
 
@@ -33,6 +34,9 @@ namespace TestZvyazok.Models
         public string Notes { get; set; }
 
         public double? Price { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<OrderINFO> OrderINFOes { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<USER> USERs { get; set; }

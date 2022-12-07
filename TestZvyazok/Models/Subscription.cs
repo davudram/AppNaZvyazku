@@ -9,6 +9,12 @@ namespace TestZvyazok.Models
     [Table("Subscription")]
     public partial class Subscription
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Subscription()
+        {
+            OrderINFOes = new HashSet<OrderINFO>();
+        }
+
         public int SubscriptionID { get; set; }
 
         [StringLength(50)]
@@ -21,6 +27,9 @@ namespace TestZvyazok.Models
         [StringLength(250)]
         public string Notes { get; set; }
 
-        public int? Price { get; set; }
+        public double? Price { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<OrderINFO> OrderINFOes { get; set; }
     }
 }

@@ -18,10 +18,7 @@ namespace TestZvyazok.Models
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int RoleID { get; set; }
 
-        [Key]
-        [Column(Order = 2)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int AuthorizationID { get; set; }
+        public int? AuthorizationID { get; set; }
 
         public int? TariffID { get; set; }
 
