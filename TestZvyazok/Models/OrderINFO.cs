@@ -9,10 +9,9 @@ namespace TestZvyazok.Models
     [Table("OrderINFO")]
     public partial class OrderINFO
     {
-        public DateTime? OrderTime { get; set; }
+        public int OrderINFOId { get; set; }
 
-        [Key]
-        public int UserID { get; set; }
+        public int? UserID { get; set; }
 
         public int? SubscriptionID { get; set; }
 

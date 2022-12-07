@@ -8,17 +8,17 @@ namespace TestZvyazok.Models
     public partial class ZvyazokModel : DbContext
     {
         public ZvyazokModel()
-            : base("name=ZvyazokModel7")
+            : base("name=ZvyazokModel9")
         {
         }
 
         public virtual DbSet<Authorization> Authorizations { get; set; }
         public virtual DbSet<CreditCard> CreditCards { get; set; }
-        public virtual DbSet<OrderINFO> OrderINFOes { get; set; }
         public virtual DbSet<PersonalArea> PersonalAreas { get; set; }
         public virtual DbSet<Role> Roles { get; set; }
         public virtual DbSet<Subscription> Subscriptions { get; set; }
         public virtual DbSet<TARIFF> TARIFFs { get; set; }
+        public virtual DbSet<OrderINFO> OrderINFOes { get; set; }
         public virtual DbSet<USER> USERs { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

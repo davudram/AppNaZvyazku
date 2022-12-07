@@ -14,8 +14,7 @@ namespace TestZvyazok.Models
         [StringLength(20)]
         public string FullName { get; set; }
 
-        [Column(TypeName = "image")]
-        public byte[] Avatar { get; set; }
+        public string Avatar { get; set; }
 
         public DateTime? DateReg { get; set; }
     }
