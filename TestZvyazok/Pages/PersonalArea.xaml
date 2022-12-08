@@ -14,20 +14,25 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <StackPanel Grid.Column="0">
+        <StackPanel Margin="50" Grid.Column="0">
             <TextBlock Text="Особистий кабінет" FontWeight="Bold" FontSize="30" HorizontalAlignment="Center" Width="274"/>
             <Image Width="180" HorizontalAlignment="Center" Source="/Icons/Без названия.png" Margin="20">
                 <Image.Effect>
                     <DropShadowEffect BlurRadius="10" Color="Black"/>
                 </Image.Effect>
             </Image>
-            <TextBlock x:Name="NameUser" Width="200" Height="30"  ></TextBlock>
-            <Button Content="Додати фото" Cursor="Hand" Width="200" Height="30" Margin="10"/>
-            <Button Content="Видалити фото" Width="200" Height="30"/>
+            <TextBlock x:Name="NameUser" Width="200" Height="30" Text="{Binding FullName}" ></TextBlock>
+
+            <TextBlock Margin="10" HorizontalAlignment="Center" FontSize="15" FontWeight="Bold" >Введіть П.І.Б.:</TextBlock>
+            <TextBox x:Name="fullNameBox" MinWidth="250" Text="{Binding PersonalAreaAuth.FullName}"/>
+
+            <TextBlock Margin="10" HorizontalAlignment="Center" FontSize="15" FontWeight="Bold">Введіть Введіть посилання на фото:</TextBlock>
+            <TextBox Name="ImageBox" Text="{Binding PersonalAreaAuth.Image}"/>
+            <Button Content="Додати інформацію" Cursor="Hand" Width="200" Height="30" Margin="10" Command="{Binding AddPersonalAreaInfo}" Click="Button_Click"/>
         </StackPanel>
 
 
-        <StackPanel Grid.Column="1">
+        <StackPanel Margin="50" Grid.Column="1">
             <TextBlock Text="Прив'язати картку" FontWeight="Bold" FontSize="30" HorizontalAlignment="Center"  Width="273"/>
             <!--<TextBox x:Name="TextBoxFullName" materialDesignMahApps:HintAssist.Hint="Введіть П.І.Б." Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="{Binding FullName, UpdateSourceTrigger=PropertyChanged}" Margin="10"/>-->
             <TextBox x:Name="TextBoxNumberCard" materialDesignMahApps:HintAssist.Hint="Введіть номер картки" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="{Binding Card.CardNumber, UpdateSourceTrigger=PropertyChanged}" Margin="10"/>

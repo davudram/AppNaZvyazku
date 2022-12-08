@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TestZvyazok.ViewModels;
 
 namespace TestZvyazok.Pages
 {
@@ -23,6 +24,11 @@ namespace TestZvyazok.Pages
         public UserControlSubscription()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.DataContext = new OrderViewModel();
         }
     }
 }

@@ -13,7 +13,7 @@
             <TextBlock x:Name="NotesSubs" FontSize="10" Margin="5" TextWrapping="Wrap"  Width="184" Height="56" FontFamily="Champagne &amp; Limousines" Text="{Binding Notes}"/>
             <TextBlock x:Name="GigSubs" FontSize="15" Margin="5" TextWrapping="Wrap"  Width="184" Height="28" FontFamily="Champagne &amp; Limousines" Text="{Binding Gigabyte, StringFormat=':{0} Гігабайтів'}"/>
             <TextBlock x:Name="PriceSubs" Margin="10" FontSize="20" FontFamily="Champagne &amp; Limousines" Text="{Binding Price, StringFormat=':{0} UAH'}" Width="109"/>
-            <Button Width="100" Content="Придбати" Margin="10" Background="#FF33A7D8" Cursor="Hand" Command="{Binding MyOrder}"></Button>
+            <Button Width="100" Content="Придбати" Margin="10" Background="#FF33A7D8" Cursor="Hand" Command="{Binding MyOrder}" Click="Button_Click"></Button>
         </StackPanel>
     </ItemsControl>
 </UserControl>

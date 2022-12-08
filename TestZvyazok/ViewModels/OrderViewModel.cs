@@ -60,6 +60,8 @@ namespace TestZvyazok.ViewModels
             if (order != null)
             {
                 OrderINFO orderINFO = new OrderINFO() { OrderINFOId = SelectedOrders.OrderINFOId};
+                model.OrderINFOes.Add(orderINFO);
+                model.SaveChanges();
             }
         }
 

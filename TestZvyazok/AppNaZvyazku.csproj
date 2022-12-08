@@ -222,7 +222,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Convertors\Base64ImageConverter.cs" />
     <Compile Include="Entrance.xaml.cs">
       <DependentUpon>Entrance.xaml</DependentUpon>
     </Compile>
@@ -239,9 +238,11 @@
       <DependentUpon>SubscriptionPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserModels\CardAuth.cs" />
+    <Compile Include="UserModels\PersonalAreaAuth.cs" />
     <Compile Include="UserModels\UserAuth.cs" />
     <Compile Include="ViewModels\CardViewModel.cs" />
     <Compile Include="ViewModels\EntranceViewModel.cs" />
+    <Compile Include="ViewModels\ImageViewModel.cs" />
     <Compile Include="ViewModels\OrderViewModel.cs" />
     <Compile Include="ViewModels\RegistrationViewModel.cs" />
     <Compile Include="ViewModels\SubscriptionViewModel.cs" />
